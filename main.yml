@@ -1,0 +1,8 @@
+---
+
+- name: My setup
+  hosts: all
+  user: root
+
+  roles:
+    - role: skeleton
