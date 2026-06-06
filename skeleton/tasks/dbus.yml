@@ -1,0 +1,11 @@
+---
+- name: Copy dbus files
+  copy:
+    src: "dbus/{{ item }}"
+    dest: "/etc/dbus-1/session.d/{{ item }}"
+    owner: root
+    group: root
+    mode: "0600"
+  loop:
+    # https://linnemanlabs.com/posts/hello-my-name-is-orca/
+    - block-orca-impersonation.conf
