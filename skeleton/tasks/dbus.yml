@@ -8,4 +8,6 @@
     mode: "0600"
   loop:
     # https://linnemanlabs.com/posts/hello-my-name-is-orca/
+    # TODO notify:
+    # busctl --user call org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus ReloadConfig
     - block-orca-impersonation.conf
