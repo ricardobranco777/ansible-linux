@@ -1,0 +1,17 @@
+---
+- name: Add custom openSSH configuration
+  copy:
+    src: ssh/custom.conf
+    dest: /etc/ssh/sshd_config.d/custom.conf
+    owner: root
+    group: root
+    mode: 0600
+
+- name: Add AllowUsers configuration
+  copy:
+    dest: /etc/ssh/sshd_config.d/users.conf
+    content: |
+      AllowUsers root ricardo
+    owner: root
+    group: root
+    mode: '0600'
