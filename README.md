@@ -2,6 +2,7 @@ Linux hardening
 
 - dbus
 - modprobe (TODO)
+- sudo
 - sysctls
 
 Sources:

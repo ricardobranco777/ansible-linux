@@ -1,0 +1,7 @@
+# openSUSE lacks /usr/local in secure_path
+Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/sbin"
+# If you use sudo-rs disable password feedback
+Defaults !pwfeedback
+# Enable insults
+Defaults insults
+%wheel ALL=(ALL:ALL) ALL

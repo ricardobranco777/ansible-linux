@@ -1,0 +1,8 @@
+---
+- name: Add custom sudo configuration
+  copy:
+    src: sudoers.d/custom
+    dest: /etc/sudoers.d/custom
+    owner: root
+    group: root
+    mode: 0600
