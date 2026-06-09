@@ -1,8 +1,10 @@
 ---
 - name: Add custom openSSH configuration
+  # The order matters so we use 00- to override any later directives
+  # https://utcc.utoronto.ca/~cks/space/blog/sysadmin/OpenSSHConfigOrderMatters
   copy:
-    src: ssh/custom.conf
-    dest: /etc/ssh/sshd_config.d/custom.conf
+    src: ssh/00-custom.conf
+    dest: /etc/ssh/sshd_config.d/00-custom.conf
     owner: root
     group: root
     mode: 0600
