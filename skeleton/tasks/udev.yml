@@ -1,0 +1,13 @@
+---
+# To reload:
+# sudo udevadm control --reload-rules
+# sudo udevadm trigger
+- name: Fix broken permissions set by udev
+  copy:
+    src: "rules.d/{{ item }}"
+    dest: "/etc/udev/rules.d/{{ item }}"
+    owner: root
+    group: root
+    mode: "0600"
+  loop:
+    - 99-permissions.rules

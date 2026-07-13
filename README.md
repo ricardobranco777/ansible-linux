@@ -4,6 +4,7 @@ Linux hardening
 - modprobe (TODO)
 - sudo
 - sysctls
+- udev
 
 Sources:
 - https://docs.kernel.org/admin-guide/sysctl/

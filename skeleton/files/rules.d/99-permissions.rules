@@ -1,0 +1,6 @@
+KERNEL=="fuse", MODE="0660", OPTIONS+="static_node=fuse"
+KERNEL=="kvm", GROUP="kvm", MODE="0660", OPTIONS+="static_node=kvm"
+KERNEL=="vfio", MODE="0660", OPTIONS+="static_node=vfio/vfio"
+KERNEL=="vsock", MODE="0660"
+KERNEL=="vhost-vsock", GROUP="kvm", MODE="0660", OPTIONS+="static_node=vhost-vsock"
+KERNEL=="vhost-net", GROUP="kvm", MODE="0660", OPTIONS+="static_node=vhost-net"
