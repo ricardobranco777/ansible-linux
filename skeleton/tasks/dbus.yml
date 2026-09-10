@@ -5,7 +5,7 @@
     dest: "/etc/dbus-1/session.d/{{ item }}"
     owner: root
     group: root
-    mode: "0600"
+    mode: "0644"
   loop:
     # https://linnemanlabs.com/posts/hello-my-name-is-orca/
     # TODO notify:
