@@ -1,4 +1,3 @@
-KERNEL=="fuse", MODE="0660", OPTIONS+="static_node=fuse"
 KERNEL=="kvm", GROUP="kvm", MODE="0660", OPTIONS+="static_node=kvm"
 KERNEL=="vfio", GROUP="kvm", MODE="0660", OPTIONS+="static_node=vfio/vfio"
 SUBSYSTEM=="vfio", KERNEL!="vfio", GROUP="kvm", MODE="0660"
