@@ -1,6 +1,7 @@
 ---
 - include_tasks: dbus.yml
 - include_tasks: doas.yml
+- include_tasks: modprobe.yml
 - include_tasks: ssh.yml
 - include_tasks: sudo.yml
 - include_tasks: sysctl.yml
