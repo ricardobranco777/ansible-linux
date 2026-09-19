@@ -1,0 +1,11 @@
+---
+- name: Copy modprobe blacklist files
+  copy:
+    src: "modprobe.d/{{ item }}"
+    dest: "/etc/modprobe.d/{{ item }}"
+    owner: root
+    group: root
+    mode: "0600"
+  loop:
+    - 99-blacklist-fs.conf
+    - 99-blacklist-net.conf
