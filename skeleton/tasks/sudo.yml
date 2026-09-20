@@ -1,4 +1,9 @@
 ---
+- name: Create /etc/sudoers.d
+  shell: mkdir -m 750 -p /etc/sudoers.d
+  args:
+    creates: /etc/sudoers.d
+
 - name: Add custom sudo configuration
   copy:
     src: sudoers.d/custom

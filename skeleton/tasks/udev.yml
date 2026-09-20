@@ -2,6 +2,11 @@
 # To reload:
 # sudo udevadm control --reload-rules
 # sudo udevadm trigger
+- name: Create /etc/udev/rules.d
+  shell: mkdir -p /etc/udev/rules.d
+  args:
+    creates: /etc/udev/rules.d
+
 - name: Fix broken permissions set by udev
   copy:
     src: "rules.d/{{ item }}"

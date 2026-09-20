@@ -1,4 +1,9 @@
 ---
+- name: Create /etc/dbus-1/session.d
+  shell: mkdir -p /etc/dbus-1/session.d
+  args:
+    creates: /etc/dbus-1/session.d
+
 - name: Copy dbus files
   copy:
     src: "dbus/{{ item }}"
