@@ -9,3 +9,4 @@
   loop:
     - 99-blacklist-fs.conf
     - 99-blacklist-net.conf
+    - kvm.conf
